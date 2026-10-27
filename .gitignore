@@ -5,5 +5,7 @@ dist
 .env
 .npmrc
 # lib/ is committed: npm installs this fork from git, and a git dependency with a
-# prepare script gets a nested, unlocked npm install on every consumer's npm ci.
-# Rebuild with `npm run build` and commit lib/ with any change to src/.
+# prepare, build, prepack, preinstall, install or postinstall script gets a
+# nested, unlocked npm install on every consumer's npm ci. Rebuild with
+# `npm run build:lib` (a name npm doesn't treat as a lifecycle script) and
+# commit lib/ with any change to src/.
